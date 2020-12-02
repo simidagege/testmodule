@@ -1,6 +1,8 @@
-plugins {
-    id 'com.android.application'
-}
+//plugins {
+  //  id 'com.android.application'
+//}
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.databinding'
 
 android {
     compileSdkVersion 30
@@ -26,6 +28,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
@@ -36,4 +42,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.simidagege:testmodule:V1.0'
+    //implementation 'androidx.databinding:databinding-compiler:4.1.1'
 }
